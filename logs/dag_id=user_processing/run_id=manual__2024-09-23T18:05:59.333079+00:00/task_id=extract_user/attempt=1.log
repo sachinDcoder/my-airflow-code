@@ -1,0 +1,26 @@
+[2024-09-23T18:06:00.713+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user manual__2024-09-23T18:05:59.333079+00:00 [queued]>
+[2024-09-23T18:06:00.730+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user manual__2024-09-23T18:05:59.333079+00:00 [queued]>
+[2024-09-23T18:06:00.731+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-09-23T18:06:00.732+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2024-09-23T18:06:00.733+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-09-23T18:06:00.754+0000] {taskinstance.py:1383} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2024-09-23 18:05:59.333079+00:00
+[2024-09-23T18:06:00.764+0000] {standard_task_runner.py:55} INFO - Started process 14562 to run task
+[2024-09-23T18:06:00.770+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extract_user', 'manual__2024-09-23T18:05:59.333079+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmprefievot']
+[2024-09-23T18:06:00.774+0000] {standard_task_runner.py:83} INFO - Job 33: Subtask extract_user
+[2024-09-23T18:06:00.888+0000] {task_command.py:376} INFO - Running <TaskInstance: user_processing.extract_user manual__2024-09-23T18:05:59.333079+00:00 [running]> on host 3faff16bae04
+[2024-09-23T18:06:01.000+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2024-09-23T18:05:59.333079+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-09-23T18:05:59.333079+00:00
+[2024-09-23T18:06:01.003+0000] {http.py:121} INFO - Calling HTTP method
+[2024-09-23T18:06:01.023+0000] {base.py:71} INFO - Using connection ID 'user_api' for task execution.
+[2024-09-23T18:06:01.026+0000] {http.py:148} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2024-09-23T18:06:01.485+0000] {http.py:125} INFO - {"results":[{"gender":"female","name":{"title":"Ms","first":"Tainá","last":"da Mota"},"location":{"street":{"number":3801,"name":"Rua da Paz "},"city":"Palhoça","state":"Mato Grosso do Sul","country":"Brazil","postcode":31574,"coordinates":{"latitude":"-80.0395","longitude":"148.4443"},"timezone":{"offset":"-12:00","description":"Eniwetok, Kwajalein"}},"email":"taina.damota@example.com","login":{"uuid":"e4d06396-3415-4fcd-881e-52d60112eb68","username":"whitefrog222","password":"anything","salt":"rfw7XZqG","md5":"6bd531342c9546848904778911e5bdf1","sha1":"0b8e0f772db041241e703c1488b19d5805e52d93","sha256":"78c788460f5d9287ed37c256252e176418202f21a4fc2c9edae7b6e48bc51a3c"},"dob":{"date":"1992-09-01T14:31:35.201Z","age":32},"registered":{"date":"2010-11-20T12:13:28.746Z","age":13},"phone":"(01) 1974-5270","cell":"(22) 3925-5405","id":{"name":"CPF","value":"669.143.530-23"},"picture":{"large":"https://randomuser.me/api/portraits/women/2.jpg","medium":"https://randomuser.me/api/portraits/med/women/2.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/2.jpg"},"nat":"BR"}],"info":{"seed":"4997c55f67cda97f","results":1,"page":1,"version":"1.4"}}
+[2024-09-23T18:06:01.526+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extract_user, execution_date=20240923T180559, start_date=20240923T180600, end_date=20240923T180601
+[2024-09-23T18:06:01.589+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2024-09-23T18:06:01.623+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
